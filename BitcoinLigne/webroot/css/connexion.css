@@ -1,0 +1,41 @@
+/* Positionnement de l'aide pour le format du mot de passe (merci Yann)*/
+
+#aide-mdp{
+	position: absolute;
+	top: 55%;
+	left: 33%;
+}
+
+/* Gestion des aides (?) */
+
+.form__tooltip{
+	font-size: 9px;
+	background: grey;
+	color:white;
+	width: 1rem;
+	height: 1rem;
+	border-radius: 50%;
+	text-align: center;
+	align-self: center;
+}
+
+.form__tooltip::after{
+	
+	position:absolute;
+	content:attr(data-tooltip);
+	display: none;
+	bottom: 5px;
+	left: 10px;
+	text-align: left;
+	width: 250px;
+}
+
+.form__tooltip:hover::after{
+	display: block;
+	font-size: 10px;
+	background: rgba(209, 206, 206);
+	color: black;
+	border-radius: 10px;
+	text-align: center;
+	z-index: 2;
+}
